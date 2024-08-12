@@ -1,0 +1,19 @@
+Hi, use the commands in this order
+
+You can split screen using "screen", read about GNU Screen
+
+Not installed:
+	~/init_pacman.sh
+	cfdisk --# split disk by 2+ parts, part1 500mb
+	ls -lsa /dev/disk/by-uuid
+	~/create_root_pool.sh $Root_pool_name /dev/disk/by-uuid/$Part2
+	~/download_zfs_boot_menu.sh /dev/disk/by-uuid/$Part1 $Mounted_system
+	~/install_arch.sh $Mounted_system $Packages
+
+In chroot
+	ln -sf /usr/share/zoneinfo/$Region/$City /ect/localtime
+	/post_install/base_setup.sh
+	/post_install/init_zfs.sh $Pool
+	/post_install/init_mkinitcpio.sh $Pool
+	/post_install/init_zram.sh
+	rm -rf /post_install

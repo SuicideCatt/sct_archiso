@@ -1,0 +1,4 @@
+**.iso
+**/linux*.zst
+**/pkgs.*
+pacman.conf
