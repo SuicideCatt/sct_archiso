@@ -1,6 +1,6 @@
 set -e
 
-pacstrap -K $@ base base-devel pkgs/linux-zen zfs-linux-zen \
+pacstrap -K $@ base base-devel pkgs/linux-zen zfs-linux-zen linux-firmware \
 	neovim git networkmanager yay
 
 echo copy ~/post_install to "$1/"
