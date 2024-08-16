@@ -20,8 +20,8 @@ zfs create -o mountpoint=none "$1/home"
 zfs create -o mountpoint=none "$1/ROOT"
 zfs create -o mountpoint=/ -o canmount=noauto "$1/ROOT/archlinux"
 
-zfs create -o mountpoint=/root "$1/home/users"
-zfs create -o mountpoint=/home "$1/home/root"
+zfs create -o mountpoint=/root "$1/home/root"
+zfs create -o mountpoint=/home "$1/home/users"
 
 zfs create -o mountpoint=/var -o canmount=off "$1/var"
 zfs create "$1/var/log"
