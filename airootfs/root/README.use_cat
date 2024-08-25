@@ -11,7 +11,7 @@ Not installed:
 	~/install_arch.sh $Mounted_system $Packages
 
 In chroot
-	ln -sf /usr/share/zoneinfo/$Region/$City /ect/localtime
+	ln -sf /usr/share/zoneinfo/$Region/$City /etc/localtime
 	/post_install/base_setup.sh
 	/post_install/init_zfs.sh $Pool
 	/post_install/init_mkinitcpio.sh $Pool
