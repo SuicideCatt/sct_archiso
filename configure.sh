@@ -12,9 +12,9 @@ KURL="$ARCHIVE/l/linux-zen/$KPACK"
 rm $PKGS/linux*.zst
 curl -o "$PKGS/$KPACK" -L "$KURL"
 
-sed 's/ParallelDownloads = 12/ParallelDownloads = $(nproc)/g' \
+sed "s/ParallelDownloads = 12/ParallelDownloads = $(nproc)/g" \
 	pacman.conf.bak > pacman.conf
-echo "Server = file://$(pwd)/\$repo/\$arch/" >> pacman.conf
+echo "Server = file://$(pwd)/\$repo/\$arch" >> pacman.conf
 
 cd "$PKGS"
 repo-add pkgs.db.tar.zst *.zst
