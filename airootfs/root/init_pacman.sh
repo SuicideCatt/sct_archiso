@@ -1,6 +1,6 @@
 set -e
 
-sed -i 's/#ParallelDownloads = 12/ParallelDownloads = $(nproc)/g' \
+sed -i "s/#ParallelDownloads = 12/ParallelDownloads = $(nproc)/g" \
 	/etc/pacman.conf
 
 pacman-key --init
