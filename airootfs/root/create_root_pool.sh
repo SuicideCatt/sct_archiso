@@ -1,4 +1,7 @@
+#!/usr/bin/zsh
+
 set -e
+zgenhostid || true
 
 # https://codeberg.org/okhsunrog/arch_sway/src/branch/main/install_arch.sh
 mkdir -p /etc/zfs/
@@ -45,7 +48,7 @@ zpool set cachefile=/etc/zfs/zpool.cache "$1"
 mkdir -p "$MOUNT/etc/zfs/"
 
 cp /etc/zfs/zpool.cache "$MOUNT/etc/zfs/zpool.cache"
-echo $(hostid) > "$MOUNT/etc/hostid"
+cp /etc/hostid "$MOUNT/etc/hostid"
 cp "/etc/zfs/$1.key" "$MOUNT/etc/zfs/$1.key"
 
 echo New system mounted to "$MOUNT"

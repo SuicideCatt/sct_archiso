@@ -10,7 +10,7 @@ zpool set cachefile=/etc/zfs/zpool.cache "$1"
 systemctl enable zfs-import-cache.service zfs-mount.service
 systemctl enable zfs-import.target zfs.target
 
-zfs set org.zfsbootmenu:commandline="spl.spl_hostid=$(cat /etc/hostid) rw" "$1/ROOT"
+zfs set org.zfsbootmenu:commandline="spl.spl_hostid=$(hostid) rw" "$1/ROOT"
 zfs set org.zfsbootmenu:keysource="$1/ROOT/archlinux" "$1"
 
 # Help:
