@@ -9,9 +9,6 @@ cp -r ~/post_install "$1/"
 echo copy pacman conf
 cat /etc/pacman.conf | head -n -6 > "$1/etc/pacman.conf"
 
-echo copy pacman poland mirrorlist
-cp /etc/pacman.d/mirrorlist_poland "$1/etc/pacman.d/mirrorlist_poland"
-
 echo "> arch-chroot \"$1\""
 arch-chroot "$1"
 
