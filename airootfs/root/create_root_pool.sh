@@ -5,7 +5,7 @@ zgenhostid || true
 
 # https://codeberg.org/okhsunrog/arch_sway/src/branch/main/install_arch.sh
 mkdir -p /etc/zfs/
-read -p "Enter ZFS encryption password: " -s zfspass
+printf "Enter ZFS encryption password: " && read zfspass
 echo "$zfspass" > "/etc/zfs/$1.key"
 chmod 000 "/etc/zfs/$1.key"
 
