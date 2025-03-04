@@ -31,7 +31,6 @@ f2fs-tools
 fatresize
 foot-terminfo
 fsarchiver
-gnu-netcat
 gpart
 gpm
 gptfdisk
@@ -51,6 +50,7 @@ lftp
 libfido2
 libusb-compat
 pkgs/linux-zen
+pkgs/linux-zen-headers
 linux-atm
 linux-firmware
 linux-firmware-marvell
@@ -90,7 +90,6 @@ pv
 qemu-guest-agent
 refind
 reflector
-reiserfsprogs
 rp-pppoe
 rsync
 rxvt-unicode-terminfo
@@ -123,6 +122,6 @@ wvdial
 xfsprogs
 xl2tpd
 zsh
-zfs-linux-zen
+zfs-dkms
 curl
 neofetch
