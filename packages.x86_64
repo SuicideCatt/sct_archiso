@@ -7,7 +7,7 @@ bcachefs-tools
 bind
 bolt
 brltty
-broadcom-wl
+broadcom-wl-dkms
 btrfs-progs
 clonezilla
 cloud-init
@@ -124,4 +124,4 @@ xl2tpd
 zsh
 zfs-dkms
 curl
-neofetch
+fastfetch
