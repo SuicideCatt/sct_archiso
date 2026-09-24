@@ -28,9 +28,9 @@ zfs create -o mountpoint=/home "$1/home/users"
 
 zfs create -o mountpoint=/var -o canmount=off "$1/var"
 zfs create "$1/var/log"
-zfs create "$1/var/lib"
 zfs create "$1/var/cache"
 
+zfs create -o canmount=off "$1/var/lib"
 zfs create "$1/var/lib/AccountsService"
 zfs create "$1/var/lib/NetworkManager"
 
